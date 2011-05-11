@@ -1,0 +1,9 @@
+Uses rsnapshot with crypted disks.
+
+In crontab:
+0 */8 * * *     root    /etc/rsnapshot-wrapper.sh hourly
+50 3 * * *      root    /etc/rsnapshot-wrapper.sh daily
+40 2 * * 6      root    /etc/rsnapshot-wrapper.sh weekly
+30 1 1 * *      root    /etc/rsnapshot-wrapper.sh monthly
+
+Some modifications needed for backup-common.sh, mainly adding correct paths and volume name for crypted backup volume.
